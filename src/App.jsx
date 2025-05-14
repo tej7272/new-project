@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { account, ID } from './lib/appwrite';
 
+
 const App = () => {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [email, setEmail] = useState('');
@@ -11,6 +12,9 @@ const App = () => {
     await account.createEmailPasswordSession(email, password);
     setLoggedInUser(await account.get());
   }
+
+
+
 
   return (
     <div>

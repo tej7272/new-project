@@ -1,10 +1,11 @@
 import { Client, Account} from 'appwrite';
+import conf from '../conf/conf'
 
 export const client = new Client();
 
 client
-    .setEndpoint(import.meta.env.VITE_APPWRITE_URL)
-    .setProject(import.meta.env.VITE_APPWRITE_URL); // Replace with your project ID
+    .setEndpoint(conf.appwrite)
+    .setProject(conf.appwriteProjectId); 
 
 export const account = new Account(client);
 export { ID } from 'appwrite';
