@@ -4,7 +4,7 @@ import conf from '../conf/conf'
 export const client = new Client();
 
 client
-    .setEndpoint(conf.appwrite)
+    .setEndpoint(conf.appwriteUrl)
     .setProject(conf.appwriteProjectId); 
 
 export const account = new Account(client);
